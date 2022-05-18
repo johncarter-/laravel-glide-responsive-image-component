@@ -4,11 +4,11 @@ namespace Johncarter\LaravelGlideResponsiveImageComponent\Commands;
 
 use Illuminate\Console\Command;
 
-class LaravelGlideResponsiveImageComponentCommand extends Command
+class GenerateImagePresets extends Command
 {
-    public $signature = 'laravel-glide-responsive-image-component';
+    public $signature = 'glide-responsive-images:generate {--force}';
 
-    public $description = 'My command';
+    public $description = 'Generates conversions for images to avoid doing it on first request.';
 
     public function handle(): int
     {
