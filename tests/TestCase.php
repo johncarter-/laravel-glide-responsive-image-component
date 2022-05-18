@@ -1,10 +1,10 @@
 <?php
 
-namespace Johncarter-\LaravelGlideResponsiveImageComponent\Tests;
+namespace Johncarter\LaravelGlideResponsiveImageComponent\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Johncarter-\LaravelGlideResponsiveImageComponent\LaravelGlideResponsiveImageComponentServiceProvider;
+use Johncarter\LaravelGlideResponsiveImageComponent\LaravelGlideResponsiveImageComponentServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Johncarter-\\LaravelGlideResponsiveImageComponent\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Johncarter\\LaravelGlideResponsiveImageComponent\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 

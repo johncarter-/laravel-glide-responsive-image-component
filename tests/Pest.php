@@ -1,5 +1,5 @@
 <?php
 
-use Johncarter-\LaravelGlideResponsiveImageComponent\Tests\TestCase;
+use Johncarter\LaravelGlideResponsiveImageComponent\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

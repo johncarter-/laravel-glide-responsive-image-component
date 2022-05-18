@@ -1,11 +1,11 @@
 <?php
 
-namespace Johncarter-\LaravelGlideResponsiveImageComponent\Facades;
+namespace Johncarter\LaravelGlideResponsiveImageComponent\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Johncarter-\LaravelGlideResponsiveImageComponent\LaravelGlideResponsiveImageComponent
+ * @see \Johncarter\LaravelGlideResponsiveImageComponent\LaravelGlideResponsiveImageComponent
  */
 class LaravelGlideResponsiveImageComponent extends Facade
 {

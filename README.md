@@ -55,8 +55,8 @@ php artisan vendor:publish --tag="laravel-glide-responsive-image-component-views
 ## Usage
 
 ```php
-$laravelGlideResponsiveImageComponent = new Johncarter-\LaravelGlideResponsiveImageComponent();
-echo $laravelGlideResponsiveImageComponent->echoPhrase('Hello, Johncarter-!');
+$laravelGlideResponsiveImageComponent = new Johncarter\LaravelGlideResponsiveImageComponent();
+echo $laravelGlideResponsiveImageComponent->echoPhrase('Hello, Johncarter!');
 ```
 
 ## Testing

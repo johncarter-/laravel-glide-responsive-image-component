@@ -1,5 +1,3 @@
 <?php
-// config for Johncarter-/LaravelGlideResponsiveImageComponent
-return [
-
-];
+// config for Johncarter/LaravelGlideResponsiveImageComponent
+return [];

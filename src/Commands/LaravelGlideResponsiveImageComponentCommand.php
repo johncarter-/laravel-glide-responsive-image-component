@@ -1,6 +1,6 @@
 <?php
 
-namespace Johncarter-\LaravelGlideResponsiveImageComponent\Commands;
+namespace Johncarter\LaravelGlideResponsiveImageComponent\Commands;
 
 use Illuminate\Console\Command;
 

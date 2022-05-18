@@ -1,6 +1,6 @@
 <?php
 
-namespace Johncarter-\LaravelGlideResponsiveImageComponent\Database\Factories;
+namespace Johncarter\LaravelGlideResponsiveImageComponent\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

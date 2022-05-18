@@ -1,6 +1,6 @@
 <?php
 
-namespace Johncarter-\LaravelGlideResponsiveImageComponent;
+namespace Johncarter\LaravelGlideResponsiveImageComponent;
 
 class LaravelGlideResponsiveImageComponent
 {

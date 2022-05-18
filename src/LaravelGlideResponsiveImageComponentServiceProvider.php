@@ -1,10 +1,10 @@
 <?php
 
-namespace Johncarter-\LaravelGlideResponsiveImageComponent;
+namespace Johncarter\LaravelGlideResponsiveImageComponent;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Johncarter-\LaravelGlideResponsiveImageComponent\Commands\LaravelGlideResponsiveImageComponentCommand;
+use Johncarter\LaravelGlideResponsiveImageComponent\Commands\LaravelGlideResponsiveImageComponentCommand;
 
 class LaravelGlideResponsiveImageComponentServiceProvider extends PackageServiceProvider
 {
