@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "johncarter/laravel-glide-responsive-image-component",
+    "description": "A responsive image component for Laravel that uses Glide for conversions",
     "keywords": [
-        ":vendor_name",
+        "johncarter-",
         "laravel",
-        ":package_slug"
+        "laravel-glide-responsive-image-component"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/johncarter/laravel-glide-responsive-image-component",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "John Carter",
+            "email": "john@johncarter.co.uk",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Johncarter-\\LaravelGlideResponsiveImageComponent\\": "src",
+            "Johncarter-\\LaravelGlideResponsiveImageComponent\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Johncarter-\\LaravelGlideResponsiveImageComponent\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +54,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Johncarter-\\LaravelGlideResponsiveImageComponent\\LaravelGlideResponsiveImageComponentServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelGlideResponsiveImageComponent": "Johncarter-\\LaravelGlideResponsiveImageComponent\\Facades\\LaravelGlideResponsiveImageComponent"
             }
         }
     },
