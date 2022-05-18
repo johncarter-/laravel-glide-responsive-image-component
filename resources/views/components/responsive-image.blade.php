@@ -9,10 +9,11 @@
           });
         });
       });
-      document.querySelectorAll('[data-responsive-images]').forEach(responsiveImage => {
-        responsiveResizeObserver.onload = null;
-        responsiveResizeObserver.observe(responsiveImage);
-      });
+      document.querySelectorAll('[data-laravel-glide-responsive-image-component]').forEach(
+        responsiveImage => {
+          responsiveResizeObserver.onload = null;
+          responsiveResizeObserver.observe(responsiveImage);
+        });
     });
   </script>
 @endonce
@@ -25,8 +26,9 @@
     sizes="1px">
 
   <img
-    data-responsive-images
+    data-laravel-glide-responsive-image-component
     loading="lazy"
     {{ $attributes }}
+    class="w-full h-auto"
     src="{{ $conversionDefaultUrl }}">
 </picture>

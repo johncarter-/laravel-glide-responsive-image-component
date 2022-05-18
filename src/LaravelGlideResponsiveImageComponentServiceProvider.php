@@ -3,7 +3,7 @@
 namespace Johncarter\LaravelGlideResponsiveImageComponent;
 
 use Johncarter\LaravelGlideResponsiveImageComponent\Commands\GenerateImagePresets;
-use Johncarter\LaravelGlideResponsiveImageComponent\View\Components\ResponsiveImage;
+use Johncarter\LaravelGlideResponsiveImageComponent\Components\ResponsiveImage;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -13,9 +13,9 @@ class LaravelGlideResponsiveImageComponentServiceProvider extends PackageService
     {
         $package
             ->name('laravel-glide-responsive-image-component')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasViewComponent('x', ResponsiveImage::class)
+            ->hasConfigFile('laravel-glide-responsive-image-component')
+            ->hasViews('laravel-glide-responsive-image-component')
+            ->hasViewComponent('glide', ResponsiveImage::class)
             ->hasCommand(GenerateImagePresets::class);
     }
 }

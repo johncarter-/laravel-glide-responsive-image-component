@@ -1,6 +1,4 @@
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
-
 # A responsive image component for Laravel that uses Glide for conversions
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/johncarter/laravel-glide-responsive-image-component.svg?style=flat-square)](https://packagist.org/packages/johncarter/laravel-glide-responsive-image-component)
@@ -26,13 +24,6 @@ You can install the package via composer:
 composer require johncarter/laravel-glide-responsive-image-component
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="laravel-glide-responsive-image-component-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
@@ -54,10 +45,7 @@ php artisan vendor:publish --tag="laravel-glide-responsive-image-component-views
 
 ## Usage
 
-```php
-$laravelGlideResponsiveImageComponent = new Johncarter\LaravelGlideResponsiveImageComponent();
-echo $laravelGlideResponsiveImageComponent->echoPhrase('Hello, Johncarter!');
-```
+TODO
 
 ## Testing
 
