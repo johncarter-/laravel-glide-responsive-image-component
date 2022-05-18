@@ -2,6 +2,7 @@
 
 namespace Johncarter\LaravelGlideResponsiveImageComponent\Components;
 
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\File;
 use Illuminate\View\Component;
 
@@ -15,21 +16,21 @@ class ResponsiveImage extends Component
 
     public function __construct($src)
     {
-        if (!file_exists($src) || is_dir($src)) {
-            $this->conversionDefaultUrl = $src;
+        $this->imagePath = $src;
+    }
+
+    public function render(): View
+    {
+        if (!file_exists($this->imagePath) || is_dir($this->imagePath)) {
+            $this->conversionDefaultUrl = $this->imagePath;
 
             return view('laravel-glide-responsive-image-component::components.responsive-image');
         }
 
-        $this->imagePath = $src;
-
         $this->filename = pathinfo($this->imagePath)['filename'];
 
-        $this->getResponsiveData($src);
-    }
+        $this->getResponsiveData($this->imagePath);
 
-    public function render()
-    {
         return view('laravel-glide-responsive-image-component::components.responsive-image');
     }
 
@@ -39,7 +40,7 @@ class ResponsiveImage extends Component
 
         $srcWidth = getimagesize($imagePath)[0];
 
-        $breakpoints->each(function ($breakpointWidth) use ($imagePath, $srcWidth, &$data) {
+        $breakpoints->each(function ($breakpointWidth) use ($imagePath, $srcWidth) {
             if ($breakpointWidth > $srcWidth) return;
 
             $this->conversionSrcsetString .= $this->firstOrCreateConversion($imagePath, $breakpointWidth) . ' ' . $breakpointWidth . 'w,';
