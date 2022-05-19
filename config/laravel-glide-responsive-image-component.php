@@ -2,7 +2,6 @@
 // config for Johncarter/LaravelGlideResponsiveImageComponent
 return [
     'breakpoints' => [
-        'none' => 1,
         'xs' => 480,
         'sm' => 640,
         'md' => 768,

@@ -13,10 +13,13 @@ class ResponsiveImage extends Component
     public ?string $conversionSrcsetString = '';
     public ?string $conversionDefaultUrl = '';
     public ?string $conversionExtension = 'webp';
+    public ?int $width = null;
 
-    public function __construct($src)
+    public function __construct(string $src, ?int $width = null)
     {
         $this->imagePath = $src;
+
+        $this->width = $width;
     }
 
     public function render(): View
@@ -38,10 +41,14 @@ class ResponsiveImage extends Component
     {
         $breakpoints = collect(config('laravel-glide-responsive-image-component.breakpoints'));
 
-        $srcWidth = getimagesize($imagePath)[0];
+        $maxRequestedWidth = $this->width ? $this->width : getimagesize($imagePath)[0];
 
-        $breakpoints->each(function ($breakpointWidth) use ($imagePath, $srcWidth) {
-            if ($breakpointWidth > $srcWidth) return;
+        $skipRest = false;
+
+        $breakpoints->each(function ($breakpointWidth) use ($imagePath, $maxRequestedWidth, &$skipRest) {
+            if ($skipRest) return;
+
+            if ($breakpointWidth > $maxRequestedWidth) $skipRest = true;
 
             $this->conversionSrcsetString .= $this->firstOrCreateConversion($imagePath, $breakpointWidth) . ' ' . $breakpointWidth . 'w,';
 
