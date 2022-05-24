@@ -12,9 +12,9 @@ class ResponsiveImage extends Component
     public ?string $conversionSrcsetString = '';
     public ?string $conversionDefaultUrl = '';
 
-    public function __construct(string $src, ?int $width = null)
+    public function __construct(string $path, ?int $width = null)
     {
-        $imageData = LaravelGlideResponsiveImageComponent::make($src, $width);
+        $imageData = LaravelGlideResponsiveImageComponent::make($path, $width);
 
         $this->conversionSrcsetString = $imageData->conversionSrcsetString;
 
