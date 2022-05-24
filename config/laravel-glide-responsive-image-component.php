@@ -11,4 +11,5 @@ return [
     ],
 
     'conversion_directory' => public_path('assets/conversions'),
+    'conversion_url' => asset('conversions'),
 ];
