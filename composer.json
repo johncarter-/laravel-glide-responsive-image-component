@@ -18,7 +18,7 @@
     "require": {
         "php": "^8.1",
         "illuminate/contracts": "^9.0 | ^10.0",
-        "spatie/laravel-glide": "^3.6",
+        "spatie/laravel-glide": "^3.7",
         "spatie/laravel-package-tools": "^1.9.2"
     },
     "require-dev": {
