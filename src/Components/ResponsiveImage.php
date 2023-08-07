@@ -11,6 +11,7 @@ class ResponsiveImage extends Component
 {
     public ?string $conversionSrcsetString = '';
     public ?string $conversionDefaultUrl = '';
+    public $loading;
 
     public function __construct(string $path, ?int $width = null)
     {
