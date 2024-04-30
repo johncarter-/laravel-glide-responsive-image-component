@@ -25,9 +25,9 @@
 
             triggerResponsiveImageUpdate();
 
-            if (typeof Livewire !== 'undefined' && Livewire.hook) {
-                Livewire.hook('morph.updated', triggerResponsiveImageUpdate);
-            }
+            window.addEventListener("updateResponsiveImages", function() {
+                triggerResponsiveImageUpdate();
+            });
 
         });
     </script>
