@@ -4,9 +4,17 @@
 
             const resizeObserverCallback = (entries, observer) => {
                 entries.forEach(entry => {
-                    const imgWidth = entry.target.getBoundingClientRect().width;
-                    entry.target.parentNode.querySelectorAll('source').forEach(source => {
-                        source.sizes = `${Math.ceil(imgWidth / window.innerWidth * 100)}vw`;
+                    const img = entry.target;
+                    const rect = img.getBoundingClientRect();
+
+                    const pixelWidth = Math.ceil(rect.width * window.devicePixelRatio);
+                    const pixelHeight = Math.ceil(rect.height * window.devicePixelRatio);
+
+                    const isPortrait = rect.height > rect.width;
+                    const targetSize = isPortrait ? `${pixelHeight}px` : `${pixelWidth}px`;
+
+                    img.parentNode.querySelectorAll('source').forEach(source => {
+                        source.sizes = targetSize;
                     });
                 });
             };
