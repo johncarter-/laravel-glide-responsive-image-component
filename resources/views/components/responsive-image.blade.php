@@ -34,7 +34,9 @@
             triggerResponsiveImageUpdate();
 
             window.addEventListener("updateResponsiveImages", function() {
-                triggerResponsiveImageUpdate();
+                requestAnimationFrame(() => {
+                    triggerResponsiveImageUpdate();
+                });
             });
 
         });
